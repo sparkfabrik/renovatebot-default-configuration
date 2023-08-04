@@ -1,37 +1,37 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [
-		"config:base",
-		":dependencyDashboard",
-		":rebaseStalePrs",
-		":enableVulnerabilityAlertsWithLabel('security')",
-		":semanticCommits",
-		":semanticCommitScope(deps)",
-		":disableMajorUpdates",
-		":preserveSemverRanges",
-		"group:recommended"
-	],
-	"reviewers": [
-		"team:platform-team"
-	],
-	"timezone": "Europe/Rome",
-	"schedule": [
-		"before 8am every weekday"
-	],
-	"labels": [
-		"dependencies"
-	],
-	"vulnerabilityAlerts": {
-		"labels": [
-			"type:security"
-		],
-		"stabilityDays": 0
-	},
-	"minimumReleaseAge": 7,
-	"gitlabci": {
-		"enabled": false
-	},
-	"gitlabci-include": {
-		"enabled": false
-	}
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":dependencyDashboard",
+    ":rebaseStalePrs",
+    ":enableVulnerabilityAlertsWithLabel('security')",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)",
+    ":disableMajorUpdates",
+    ":preserveSemverRanges",
+    "group:recommended"
+  ],
+  "reviewers": [
+    "team:platform-team"
+  ],
+  "timezone": "Europe/Rome",
+  "schedule": [
+    "before 8am every weekday"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "vulnerabilityAlerts": {
+    "labels": [
+      "type:security"
+    ],
+    "stabilityDays": 0
+  },
+  "minimumReleaseAge": 7,
+  "gitlabci": {
+    "enabled": false
+  },
+  "gitlabci-include": {
+    "enabled": false
+  }
 }
