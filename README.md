@@ -1,7 +1,5 @@
 # RenovateBot Default Configuration
 
-![RenovateBot Logo](https://www.renovatebot.com/images/renovatebot-logo.png)
-
 RenovateBot is an automated dependency update tool that helps keep your software projects up-to-date by regularly checking for new versions of dependencies and creating pull requests to update them. This README provides an overview of the default configuration used by RenovateBot.
 
 ## What is RenovateBot Default Configuration?
