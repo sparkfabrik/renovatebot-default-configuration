@@ -27,7 +27,7 @@
     ],
     "stabilityDays": 0
   },
-  "minimumReleaseAge": 7,
+  "minimumReleaseAge": "7",
   "gitlabci": {
     "enabled": false
   },
