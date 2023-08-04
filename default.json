@@ -11,6 +11,7 @@
     ":preserveSemverRanges",
     "group:recommended"
   ],
+  "reviewers": ["team:platform-team"],
   "timezone": "Europe/Rome",
   "schedule": [
     "before 8am every weekday",
