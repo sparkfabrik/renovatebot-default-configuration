@@ -33,5 +33,19 @@
   },
   "gitlabci-include": {
     "enabled": false
-  }
+  },
+  "packageRules": [
+    {
+      "matchManagers": [
+        "terraform"
+      ],
+      "description": "Enabled major, minor, and patch updates for Terraform",
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "enabled": true
+    }
+  ]
 }
