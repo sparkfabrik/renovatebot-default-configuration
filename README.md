@@ -38,9 +38,10 @@ All you need to do is add one of the following options to your renovate configur
 
 **Custom config**:
 
+Change `<confgi-name>` with the correct config name without extension (ex. `github`).
+
 ```json
 {
-  "extends": ["github>sparkfabrik/renovatebot-default-configuration//custom/sparkfabrik"],
+  "extends": ["github>sparkfabrik/renovatebot-default-configuration//custom/<config-name>"],
 }
 ```
-

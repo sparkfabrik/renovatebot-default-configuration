@@ -12,7 +12,6 @@
     "group:recommended"
   ],
   "timezone": "Europe/Rome",
-  "schedule": ["before 8am every weekday"],
   "labels": ["dependencies"],
   "vulnerabilityAlerts": {
     "labels": ["type:security"],
@@ -20,12 +19,6 @@
   },
   "osvVulnerabilityAlerts": true,
   "minimumReleaseAge": "7",
-  "gitlabci": {
-    "enabled": false
-  },
-  "gitlabci-include": {
-    "enabled": false
-  },
   "packageRules": [
     {
       "matchManagers": ["terraform"],
