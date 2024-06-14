@@ -1,0 +1,44 @@
+{
+  "extends": ["github>sparkfabrik/renovatebot-default-configuration"],
+  "gitlabci": {
+    "enabled": false
+  },
+  "gitlabci-include": {
+    "enabled": false
+  },
+  "packageRules": [
+    {
+      "groupName": "Drupal contributed modules",
+      "matchManagers": ["composer"],
+      "matchPackagePatterns": ["^drupal/"],
+      "rangeStrategy": "update-lockfile",
+      "enabled": false
+    },
+    {
+      "groupName": "Sparkfabrik modules",
+      "matchManagers": ["composer"],
+      "matchPackagePatterns": ["^sparkfabrik/"],
+      "rangeStrategy": "update-lockfile",
+      "enabled": false
+    },
+    {
+      "groupName": "Drupal core",
+      "matchManagers": ["composer"],
+      "matchPackagePatterns": [
+        "^drupal/core-recommended",
+        "^drupal/core-composer-scaffold",
+        "^drupal/core-project-message"
+      ],
+      "rangeStrategy": "update-lockfile",
+      "enabled": false
+    },
+    {
+      "matchManagers": ["terraform", "terraform-version"],
+      "description": "Enabled major, minor, and patch updates for Terraform",
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
+      "enabled": true,
+      "automerge": true,
+      "prHourlyLimit": 1
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "extends": ["github>sparkfabrik/renovatebot-default-configuration"],
+  "timezone": "Europe/Rome",
+  "schedule": ["before 8am every weekday"],
+  "gitlabci": {
+    "enabled": false
+  },
+  "gitlabci-include": {
+    "enabled": false
+  },
+  "reviewers": ["team:platform-team"]
+}

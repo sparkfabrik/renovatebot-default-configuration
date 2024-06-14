@@ -24,14 +24,24 @@ RenovateBot's default configuration is a set of predefined settings that determi
 
 ## Getting Started
 
-To enable RenovateBot with the default configuration, follow these steps:
+To use the configurations provided by this repository you can use [shareble config presets](https://docs.renovatebot.com/config-presets/).
 
-1. Add a configuration file (e.g., `.renovaterc.json`, `.renovate.json`) to the root of your project.
+All you need to do is add one of the following options to your renovate configuration file (see more info [here](https://docs.renovatebot.com/getting-started/installing-onboarding/#configuration-location)):
 
-2. Use the following JSON code as a starting point:
+**Default config**:
 
 ```json
 {
-  "extends": ["config:base"],
-  "token": "YOUR_GITHUB_TOKEN"
+  "extends": ["github>sparkfabrik/renovatebot-default-configuration"],
 }
+```
+
+**Custom config**:
+
+Change `<confgi-name>` with the correct config name without extension (ex. `github`).
+
+```json
+{
+  "extends": ["github>sparkfabrik/renovatebot-default-configuration//custom/<config-name>"],
+}
+```

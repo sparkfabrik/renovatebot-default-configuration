@@ -11,40 +11,19 @@
     ":preserveSemverRanges",
     "group:recommended"
   ],
-  "reviewers": [
-    "team:platform-team"
-  ],
   "timezone": "Europe/Rome",
-  "schedule": [
-    "before 8am every weekday"
-  ],
-  "labels": [
-    "dependencies"
-  ],
+  "labels": ["dependencies"],
   "vulnerabilityAlerts": {
-    "labels": [
-      "type:security"
-    ],
+    "labels": ["type:security"],
     "stabilityDays": 0
   },
+  "osvVulnerabilityAlerts": true,
   "minimumReleaseAge": "7",
-  "gitlabci": {
-    "enabled": false
-  },
-  "gitlabci-include": {
-    "enabled": false
-  },
   "packageRules": [
     {
-      "matchManagers": [
-        "terraform"
-      ],
+      "matchManagers": ["terraform"],
       "description": "Enabled major, minor, and patch updates for Terraform",
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "enabled": true
     }
   ]
