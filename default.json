@@ -24,9 +24,6 @@
       "matchManagers": ["terraform"],
       "description": "Enabled major, minor, and patch updates for Terraform",
       "matchUpdateTypes": ["major", "minor", "patch"],
-      "lockFileMaintenance": {
-        "enabled": true
-      },
       "enabled": true
     }
   ]
