@@ -36,6 +36,9 @@
       "matchManagers": ["terraform", "terraform-version"],
       "description": "Enabled major, minor, and patch updates for Terraform",
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
+      "lockFileMaintenance": {
+        "enabled": true
+      },
       "enabled": true,
       "automerge": true,
       "prHourlyLimit": 1
