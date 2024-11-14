@@ -11,15 +11,21 @@
       "groupName": "Drupal contributed modules",
       "matchManagers": ["composer"],
       "matchPackagePatterns": ["^drupal/"],
+      "separateMajorMinor": true,
       "rangeStrategy": "update-lockfile",
-      "enabled": false
+      "enabled": true,
+      "automerge": false,
+      "prHourlyLimit": 1
     },
     {
       "groupName": "Sparkfabrik modules",
       "matchManagers": ["composer"],
       "matchPackagePatterns": ["^sparkfabrik/"],
       "rangeStrategy": "update-lockfile",
-      "enabled": false
+      "enabled": true,
+      "automerge": false,
+      "separateMajorMinor": true,
+      "prHourlyLimit": 1
     },
     {
       "groupName": "Drupal core",
@@ -30,7 +36,10 @@
         "^drupal/core-project-message"
       ],
       "rangeStrategy": "update-lockfile",
-      "enabled": false
+      "enabled": true,
+      "automerge": false,
+      "separateMajorMinor": true,
+      "prHourlyLimit": 1
     },
     {
       "matchManagers": ["terraform", "terraform-version"],
