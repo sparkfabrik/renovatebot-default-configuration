@@ -15,7 +15,9 @@
       "rangeStrategy": "update-lockfile",
       "enabled": true,
       "automerge": false,
-      "prHourlyLimit": 1
+      "prHourlyLimit": 5,
+      "branchConcurrentLimit": 10,
+      "prConcurrentLimit": 10
     },
     {
       "groupName": "Sparkfabrik modules",
@@ -25,7 +27,9 @@
       "enabled": true,
       "automerge": false,
       "separateMajorMinor": true,
-      "prHourlyLimit": 1
+      "prHourlyLimit": 5,
+      "branchConcurrentLimit": 10,
+      "prConcurrentLimit": 10
     },
     {
       "groupName": "Drupal core",
@@ -39,7 +43,9 @@
       "enabled": true,
       "automerge": false,
       "separateMajorMinor": true,
-      "prHourlyLimit": 1
+      "prHourlyLimit": 5,
+      "branchConcurrentLimit": 10,
+      "prConcurrentLimit": 10
     },
     {
       "matchManagers": ["terraform", "terraform-version"],
@@ -50,7 +56,9 @@
       },
       "enabled": true,
       "automerge": true,
-      "prHourlyLimit": 1
+      "prHourlyLimit": 5,
+      "branchConcurrentLimit": 10,
+      "prConcurrentLimit": 10
     }
   ]
 }
