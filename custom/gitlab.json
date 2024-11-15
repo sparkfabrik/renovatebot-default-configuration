@@ -35,9 +35,7 @@
       "groupName": "Drupal core",
       "matchManagers": ["composer"],
       "matchPackagePatterns": [
-        "^drupal/core-recommended",
-        "^drupal/core-composer-scaffold",
-        "^drupal/core-project-message"
+        "^drupal/core-*"
       ],
       "rangeStrategy": "update-lockfile",
       "enabled": true,
