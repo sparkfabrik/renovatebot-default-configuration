@@ -11,26 +11,39 @@
       "groupName": "Drupal contributed modules",
       "matchManagers": ["composer"],
       "matchPackagePatterns": ["^drupal/"],
+      "separateMajorMinor": true,
       "rangeStrategy": "update-lockfile",
-      "enabled": false
+      "enabled": true,
+      "automerge": false,
+      "prHourlyLimit": 5,
+      "branchConcurrentLimit": 10,
+      "prConcurrentLimit": 10
     },
     {
       "groupName": "Sparkfabrik modules",
       "matchManagers": ["composer"],
       "matchPackagePatterns": ["^sparkfabrik/"],
       "rangeStrategy": "update-lockfile",
-      "enabled": false
+      "enabled": true,
+      "automerge": false,
+      "separateMajorMinor": true,
+      "prHourlyLimit": 5,
+      "branchConcurrentLimit": 10,
+      "prConcurrentLimit": 10
     },
     {
       "groupName": "Drupal core",
       "matchManagers": ["composer"],
       "matchPackagePatterns": [
-        "^drupal/core-recommended",
-        "^drupal/core-composer-scaffold",
-        "^drupal/core-project-message"
+        "^drupal/core-*"
       ],
       "rangeStrategy": "update-lockfile",
-      "enabled": false
+      "enabled": true,
+      "automerge": false,
+      "separateMajorMinor": true,
+      "prHourlyLimit": 5,
+      "branchConcurrentLimit": 10,
+      "prConcurrentLimit": 10
     },
     {
       "matchManagers": ["terraform", "terraform-version"],
