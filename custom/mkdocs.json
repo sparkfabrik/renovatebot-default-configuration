@@ -1,0 +1,39 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["Makefile"],
+      "matchStrings": [
+        "MKDOCS_IMAGE_TAG[\\ \\?:]*=[\\ ]*(?<currentValue>.*?)\n"
+      ],
+      "depNameTemplate": "mkdocs_makefile",
+      "versioningTemplate": "semver-coerced",
+      "datasourceTemplate": "custom.mkdocs_makefile"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["Makefile"],
+      "matchStrings": [
+        "BITNAMI_NGINX_IMAGE_TAG[\\ \\?:]*=[\\ ]*(?<currentValue>.*?)\n"
+      ],
+      "depNameTemplate": "bitnami_nginx_makefile",
+      "versioningTemplate": "semver-coerced",
+      "datasourceTemplate": "custom.bitnami_nginx_makefile"
+    }
+  ],
+  "customDatasources": {
+    "mkdocs_makefile": {
+      "defaultRegistryUrlTemplate": "https://hub.docker.com/v2/namespaces/squidfunk/repositories/mkdocs-material/tags",
+      "transformTemplates": [
+        "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name } }) }"
+      ]
+    },
+    "bitnami_nginx_makefile": {
+      "defaultRegistryUrlTemplate": "https://hub.docker.com/v2/namespaces/bitnami/repositories/nginx/tags",
+      "transformTemplates": [
+        "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name } }) }"
+      ]
+    }
+  }
+}
