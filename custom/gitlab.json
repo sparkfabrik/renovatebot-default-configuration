@@ -35,7 +35,7 @@
       "groupName": "Drupal core",
       "matchManagers": ["composer"],
       "matchPackagePatterns": [
-        "^drupal/core-*"
+        "^drupal/core(-.*)?$"
       ],
       "rangeStrategy": "update-lockfile",
       "enabled": true,
