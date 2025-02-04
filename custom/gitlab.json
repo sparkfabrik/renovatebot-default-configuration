@@ -10,7 +10,7 @@
     {
       "groupName": "Drupal contributed modules",
       "matchManagers": ["composer"],
-      "matchPackagePatterns": ["^drupal/"],
+      "matchPackageNames": ["/^drupal\//"],
       "separateMajorMinor": true,
       "rangeStrategy": "update-lockfile",
       "enabled": true,
@@ -22,7 +22,7 @@
     {
       "groupName": "Sparkfabrik modules",
       "matchManagers": ["composer"],
-      "matchPackagePatterns": ["^sparkfabrik/"],
+      "matchPackageNames": ["/^sparkfabrik\//"],
       "rangeStrategy": "update-lockfile",
       "enabled": true,
       "automerge": false,
@@ -34,8 +34,8 @@
     {
       "groupName": "Drupal core",
       "matchManagers": ["composer"],
-      "matchPackagePatterns": [
-        "^drupal/core(-.*)?$"
+      "matchPackageNames": [
+        "/^drupal\/core(-.*)?$/"
       ],
       "rangeStrategy": "update-lockfile",
       "enabled": true,
