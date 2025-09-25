@@ -7,9 +7,9 @@
       "matchStrings": [
         "MKDOCS_IMAGE_TAG[\\ \\?:]*=[\\ ]*(?<currentValue>.*?)\n"
       ],
-      "depNameTemplate": "mkdocs_makefile",
+      "depNameTemplate": "mkdocs",
       "versioningTemplate": "semver-coerced",
-      "datasourceTemplate": "custom.mkdocs_makefile"
+      "datasourceTemplate": "custom.mkdocs"
     },
     {
       "customType": "regex",
@@ -17,20 +17,40 @@
       "matchStrings": [
         "BITNAMI_NGINX_IMAGE_TAG[\\ \\?:]*=[\\ ]*(?<currentValue>.*?)\n"
       ],
-      "depNameTemplate": "bitnami_nginx_makefile",
+      "depNameTemplate": "bitnami_nginx",
       "versioningTemplate": "semver-coerced",
-      "datasourceTemplate": "custom.bitnami_nginx_makefile"
+      "datasourceTemplate": "custom.bitnami_nginx"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["configuration_schema\\.json"],
+      "matchStrings": [
+        "\"MKDOCS_IMAGE_TAG\":[\\s\\S]*?\"default\":\\s*\"(?<currentValue>[^\"]+)\""
+      ],
+      "depNameTemplate": "mkdocs_configuration_schema",
+      "versioningTemplate": "semver-coerced",
+      "datasourceTemplate": "custom.mkdocs"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["configuration_schema\\.json"],
+      "matchStrings": [
+        "\"BITNAMI_NGINX_IMAGE_TAG\":[\\s\\S]*?\"default\":\\s*\"(?<currentValue>[^\"]+)\""
+      ],
+      "depNameTemplate": "bitnami_nginx_configuration_schema",
+      "versioningTemplate": "semver-coerced",
+      "datasourceTemplate": "custom.bitnami_nginx"
     }
   ],
   "customDatasources": {
-    "mkdocs_makefile": {
+    "mkdocs": {
       "defaultRegistryUrlTemplate": "https://hub.docker.com/v2/namespaces/squidfunk/repositories/mkdocs-material/tags",
       "transformTemplates": [
         "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name } }) }"
       ]
     },
-    "bitnami_nginx_makefile": {
-      "defaultRegistryUrlTemplate": "https://hub.docker.com/v2/namespaces/bitnami/repositories/nginx/tags",
+    "bitnami_nginx": {
+      "defaultRegistryUrlTemplate": "https://hub.docker.com/v2/namespaces/bitnamilegacy/repositories/nginx/tags",
       "transformTemplates": [
         "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name } }) }"
       ]
