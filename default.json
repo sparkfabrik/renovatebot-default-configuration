@@ -1,15 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
-    ":dependencyDashboard",
+    "config:recommended",
     ":rebaseStalePrs",
     ":enableVulnerabilityAlertsWithLabel('security')",
     ":semanticCommits",
     ":semanticCommitScope(deps)",
     ":disableMajorUpdates",
-    ":preserveSemverRanges",
-    "group:recommended"
+    ":preserveSemverRanges"
   ],
   "timezone": "Europe/Rome",
   "labels": ["dependencies"],
