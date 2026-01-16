@@ -23,6 +23,12 @@
       "description": "Enabled major, minor, and patch updates for Terraform",
       "matchUpdateTypes": ["major", "minor", "patch"],
       "enabled": true
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "description": "Enabled major, minor, and patch updates for GitHub Actions",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "enabled": true
     }
   ]
 }
