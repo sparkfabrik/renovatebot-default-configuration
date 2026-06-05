@@ -3,26 +3,6 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["Makefile"],
-      "matchStrings": [
-        "MKDOCS_IMAGE_TAG[\\ \\?:]*=[\\ ]*(?<currentValue>.*?)\n"
-      ],
-      "depNameTemplate": "mkdocs",
-      "versioningTemplate": "semver-coerced",
-      "datasourceTemplate": "custom.mkdocs"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": ["Makefile"],
-      "matchStrings": [
-        "BITNAMI_NGINX_IMAGE_TAG[\\ \\?:]*=[\\ ]*(?<currentValue>.*?)\n"
-      ],
-      "depNameTemplate": "bitnami_nginx",
-      "versioningTemplate": "semver-coerced",
-      "datasourceTemplate": "custom.bitnami_nginx"
-    },
-    {
-      "customType": "regex",
       "fileMatch": ["configuration_schema\\.json"],
       "matchStrings": [
         "\"MKDOCS_IMAGE_TAG\":[\\s\\S]*?\"default\":\\s*\"(?<currentValue>[^\"]+)\""
@@ -35,11 +15,31 @@
       "customType": "regex",
       "fileMatch": ["configuration_schema\\.json"],
       "matchStrings": [
-        "\"BITNAMI_NGINX_IMAGE_TAG\":[\\s\\S]*?\"default\":\\s*\"(?<currentValue>[^\"]+)\""
+        "\"ZENSICAL_IMAGE_TAG\":[\\s\\S]*?\"default\":\\s*\"(?<currentValue>[^\"]+)\""
       ],
-      "depNameTemplate": "bitnami_nginx_configuration_schema",
+      "depNameTemplate": "zensical_configuration_schema",
       "versioningTemplate": "semver-coerced",
-      "datasourceTemplate": "custom.bitnami_nginx"
+      "datasourceTemplate": "custom.zensical"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/)fs-pkg-config\\.ya?ml$"],
+      "matchStrings": [
+        "MKDOCS_IMAGE_TAG:\\s*[\"']?(?<currentValue>[^\"'\\s#]+)"
+      ],
+      "depNameTemplate": "mkdocs_fs_pkg_config",
+      "versioningTemplate": "semver-coerced",
+      "datasourceTemplate": "custom.mkdocs"
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/)fs-pkg-config\\.ya?ml$"],
+      "matchStrings": [
+        "ZENSICAL_IMAGE_TAG:\\s*[\"']?(?<currentValue>[^\"'\\s#]+)"
+      ],
+      "depNameTemplate": "zensical_fs_pkg_config",
+      "versioningTemplate": "semver-coerced",
+      "datasourceTemplate": "custom.zensical"
     }
   ],
   "customDatasources": {
@@ -49,8 +49,8 @@
         "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name } }) }"
       ]
     },
-    "bitnami_nginx": {
-      "defaultRegistryUrlTemplate": "https://hub.docker.com/v2/namespaces/bitnamilegacy/repositories/nginx/tags",
+    "zensical": {
+      "defaultRegistryUrlTemplate": "https://hub.docker.com/v2/namespaces/zensical/repositories/zensical/tags",
       "transformTemplates": [
         "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name } }) }"
       ]
