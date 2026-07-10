@@ -46,13 +46,13 @@
     "mkdocs": {
       "defaultRegistryUrlTemplate": "https://hub.docker.com/v2/namespaces/squidfunk/repositories/mkdocs-material/tags",
       "transformTemplates": [
-        "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name } }) }"
+        "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name, \"releaseTimestamp\": $v.tag_last_pushed } }) }"
       ]
     },
     "zensical": {
       "defaultRegistryUrlTemplate": "https://hub.docker.com/v2/namespaces/zensical/repositories/zensical/tags",
       "transformTemplates": [
-        "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name } }) }"
+        "{ \"releases\": $map($.results, function($v) { { \"version\": $v.name, \"releaseTimestamp\": $v.tag_last_pushed } }) }"
       ]
     }
   }
