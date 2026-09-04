@@ -16,7 +16,8 @@
     "stabilityDays": 0
   },
   "osvVulnerabilityAlerts": true,
-  "minimumReleaseAge": "7",
+  "minimumReleaseAge": "7 days",
+  "minimumReleaseAgeBehaviour": "timestamp-optional",
   "packageRules": [
     {
       "matchManagers": ["terraform"],
