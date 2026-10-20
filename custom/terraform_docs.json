@@ -16,7 +16,7 @@
     "terraform_docs_makefile": {
       "defaultRegistryUrlTemplate": "https://quay.io/api/v1/repository/terraform-docs/terraform-docs/tag/",
       "transformTemplates": [
-        "{ \"releases\": $map($.tags, function($v) { { \"version\": $v.name } }) }"
+        "{ \"releases\": $map($.tags, function($v) { { \"version\": $v.name, \"releaseTimestamp\": $v.start_ts } }) }"
       ]
     }
   }
